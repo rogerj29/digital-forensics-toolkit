@@ -1,7 +1,7 @@
 # digital-forensics-toolkit
 
 ## Overview
-The **Forensic Toolkit** is a collection of open-source digital forensic tools used for disk imaging, memory analysis, network forensics, password cracking, and timeline reconstruction. This repository provides documentation and practical usage guidelines for each tool.
+The digital-forensic-toolkit is a collection of open-source digital forensic tools used for disk imaging, memory analysis, network forensics, password cracking, and timeline reconstruction. This repository provides documentation and practical usage guidelines for each tool.
 
 ## Tools Included
 
