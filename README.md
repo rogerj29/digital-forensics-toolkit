@@ -48,6 +48,8 @@ Forensic-Toolkit/
 git clone https://github.com/YOUR-USERNAME/Forensic-Toolkit.git
 cd Forensic-Toolkit
 ```
+## Operating System Compatibility
+All tools in this toolkit are available for use on Windows. Some tools, such as CertUtil, are built into Windows, while others may require additional installations. Refer to each tool’s documentation in the /docs folder for detailed setup instructions.
 
 ### **Using the Tools**
 Each tool's documentation can be found in the `/docs` folder, with installation steps and forensic workflows.
