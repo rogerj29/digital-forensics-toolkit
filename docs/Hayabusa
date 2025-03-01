@@ -1,0 +1,62 @@
+# Hayabusa - Windows Event Log Analysis Tool
+
+## Overview
+Hayabusa is an open-source digital forensic and threat detection tool for analyzing Windows Event Logs. It uses **Sigma rule-based detection** to identify suspicious activity, making it a powerful resource for incident response, forensic analysis, and threat hunting.
+
+## Key Features
+- Parses **Windows Event Logs (EVTX)** to identify security-relevant activity.
+- Uses **Sigma rules** to detect anomalies and security threats.
+- Provides results in multiple formats (**CSV, JSON, Markdown**).
+- Supports bulk processing of multiple EVTX files.
+- Customizable detection rules to reduce false positives.
+
+## Installation & Setup
+### Prerequisites
+- Python 3.8+ (Recommended)
+- Windows or Linux OS
+
+### Installation Steps
+1. Clone the Hayabusa repository:
+   ```bash
+   git clone https://github.com/Yamato-Security/hayabusa.git
+   ```
+2. Navigate to the directory:
+   ```bash
+   cd hayabusa
+   ```
+3. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+### Basic Command
+To scan a single EVTX file and output results:
+```bash
+python hayabusa.py -f C:\path\to\eventlog.evtx -o results.csv
+```
+
+### Bulk Processing
+To scan all EVTX files in a folder:
+```bash
+python hayabusa.py -d C:\Windows\System32\winevt\Logs -o bulk_results.csv
+```
+
+### Filtering by Sigma Rules
+To apply only specific Sigma rules:
+```bash
+python hayabusa.py -f C:\path\to\eventlog.evtx --rules C:\path\to\sigma-rules
+```
+
+## Forensic Use Cases
+- **Threat Hunting:** Identify suspicious logins, malware execution, and privilege escalations.
+- **Incident Response:** Quickly analyze large volumes of event logs.
+- **Forensic Investigations:** Detect unauthorized access, persistence mechanisms, and security breaches.
+
+## Output Formats
+- **CSV**: Tabular format for spreadsheets
+- **JSON**: Structured data for integration with SIEMs
+- **Markdown**: Easy-to-read report generation
+
+
+---
