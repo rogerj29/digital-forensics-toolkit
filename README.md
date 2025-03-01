@@ -25,12 +25,10 @@ The digital-forensic-toolkit is a collection of open-source digital forensic too
 - **John the Ripper** - Brute-force and dictionary attack tool.
 
 ### **6. File Carving & Recovery**
-- **Scalpel / Foremost** - Recovers deleted files.
 - **PhotoRec** - Extracts lost digital media files.
-- **Bulk Extractor** - Scans for hidden artifacts.
 
 ### **7. Log Analysis & File Integrity**
-- **Splunk / ELK Stack / GrayLog** - Log analysis tools.
+- **Hayabusa** - Log analysis tools.
 - **CertUtil / HashCalc** - File integrity verification tools.
 
 ## Repository Structure
