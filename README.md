@@ -36,8 +36,7 @@ The digital-forensic-toolkit is a collection of open-source digital forensic too
 Forensic-Toolkit/
 │── README.md  (Project description)
 │── docs/  (Tool documentation & usage guides)
-│── images/  (Screenshots of forensic tools in action)
-│── scripts/  (Automation and helper scripts)
+│── InstallationScript/  (Toolkit Installation Script)
 
 ```
 
