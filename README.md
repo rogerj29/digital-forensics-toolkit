@@ -46,6 +46,91 @@ Forensic-Toolkit/
 git clone https://github.com/YOUR-USERNAME/Forensic-Toolkit.git
 cd Forensic-Toolkit
 ```
+# Digital Forensics Toolkit Installer for Windows
+
+## Overview
+
+This script automatically downloads and installs a set of digital forensic tools and clones repositories into a single folder (`C:\Digital-Forensic-Toolkit`) on Windows. Some tools are installed silently, while others require manual download/installation. The script also clones repositories for selected tools.
+
+## Prerequisites
+
+Before running the script, ensure you have met the following prerequisites:
+
+- **Operating System:** Windows (tested on Windows 10/11)
+- **Administrator Rights:** Run the script from an elevated PowerShell prompt ("Run as Administrator").
+- **PowerShell Execution Policy:**  
+  If script execution is disabled, set your policy to `RemoteSigned` by running:
+  ```powershell
+  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Internet Connection: A stable connection is required for downloading installers, ZIP files, and cloning repositories.
+Git for Windows:
+Install Git from https://git-scm.com/download/win if you wish to clone repositories for Log2Timeline/Plaso and John the Ripper.
+Python (Optional):
+If you want to install Volatility via pip, ensure Python is installed and added to your system's PATH.
+Manual Installation Tools:
+Some tools (FTK Imager, WinHex/HxD, Hashcat, HashCalc, and TestDisk/PhotoRec) require manual download/installation. The script will automatically open their download pages.
+Tools Covered
+The script handles the following tools:
+
+Installer-Based Tools:
+
+Wireshark (Network Forensics):
+Downloads from the provided URL and installs silently.
+Autopsy (Imaging & Disk Analysis):
+Downloads an MSI and installs via msiexec in silent mode.
+Volatility (Memory Analysis):
+Installed via pip if Python is available.
+Git-Cloned Tools:
+
+Log2Timeline/Plaso (Timeline Reconstruction):
+Cloned from GitHub.
+John the Ripper (Password Cracking):
+Cloned from GitHub.
+Downloaded & Extracted Tools:
+
+Hayabusa (Log Analysis & File Integrity):
+Downloads and extracts from the provided ZIP URL.
+NetworkMiner (Network Forensics):
+Downloads and extracts from the provided URL.
+Manual Download Tools:
+
+FTK Imager
+WinHex/HxD
+Hashcat
+HashCalc
+TestDisk (PhotoRec)
+
+Usage
+1. Run PowerShell as Administrator.
+2. Set the Execution Policy (if needed):
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+3. Execute the script:
+
+.\Install-DFToolkit.ps1
+
+Script Workflow
+Folder Setup:
+The script creates a folder at C:\Digital-Forensic-Toolkit for all downloads, extractions, and repository clones.
+
+Installer-Based Tools:
+
+Wireshark is downloaded from the specified URL and installed silently.
+Autopsy is downloaded as an MSI and installed using msiexec in silent mode.
+Volatility:
+The script checks for Python and installs Volatility via pip if available.
+
+Git-Cloned Tools:
+The script clones the repositories for Log2Timeline/Plaso and John the Ripper.
+
+Downloaded & Extracted Tools:
+The script downloads and extracts Hayabusa and NetworkMiner.
+
+Manual Download Tools:
+The script opens the download pages for FTK Imager, WinHex/HxD, Hashcat, HashCalc, and TestDisk (PhotoRec) in your default browser for manual installation.
+
+Notes
 ## Operating System Compatibility
 All tools in this toolkit are available for use on Windows. Some tools, such as CertUtil, are built into Windows, while others may require additional installations. Refer to each tool’s documentation in the /docs folder for detailed setup instructions.
 
