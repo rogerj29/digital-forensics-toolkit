@@ -104,11 +104,11 @@ Usage
 1. Run PowerShell as Administrator.
 2. Set the Execution Policy (if needed):
 
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+''' Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 3. Execute the script:
 
-.\Install-DFToolkit.ps1
+''' .\Install-DFToolkit.ps1
 
 Script Workflow
 Folder Setup:
