@@ -72,7 +72,7 @@ Some tools (FTK Imager, WinHex/HxD, Hashcat, HashCalc, and TestDisk/PhotoRec) re
 Tools Covered
 The script handles the following tools:
 
-Installer-Based Tools:
+### Installer-Based Tools:
 
 Wireshark (Network Forensics):
 Downloads from the provided URL and installs silently.
@@ -80,7 +80,8 @@ Autopsy (Imaging & Disk Analysis):
 Downloads an MSI and installs via msiexec in silent mode.
 Volatility (Memory Analysis):
 Installed via pip if Python is available.
-Git-Cloned Tools:
+
+### Git-Cloned Tools:
 
 Log2Timeline/Plaso (Timeline Reconstruction):
 Cloned from GitHub.
@@ -117,27 +118,27 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 .\Install-DFToolkit.ps1
 ```
 
-Script Workflow
+## Script Workflow
+
 Folder Setup:
 The script creates a folder at C:\Digital-Forensic-Toolkit for all downloads, extractions, and repository clones.
 
-Installer-Based Tools:
+### Installer-Based Tools:
 
 Wireshark is downloaded from the specified URL and installed silently.
 Autopsy is downloaded as an MSI and installed using msiexec in silent mode.
 Volatility:
 The script checks for Python and installs Volatility via pip if available.
 
-Git-Cloned Tools:
+### Git-Cloned Tools:
 The script clones the repositories for Log2Timeline/Plaso and John the Ripper.
 
-Downloaded & Extracted Tools:
+### Downloaded & Extracted Tools:
 The script downloads and extracts Hayabusa and NetworkMiner.
 
-Manual Download Tools:
-The script opens the download pages for FTK Imager, WinHex/HxD, Hashcat, HashCalc, and TestDisk (PhotoRec) in your default browser for manual installation.
+### Manual Download Tools:
+The script opens the download pages for FTK Imager, WinHex, HxD, Hashcat, HashCalc, and TestDisk (PhotoRec) in your default browser for manual installation.
 
-Notes
 ## Operating System Compatibility
 All tools in this toolkit are available for use on Windows. Some tools, such as CertUtil, are built into Windows, while others may require additional installations. Refer to each tool’s documentation in the /docs folder for detailed setup instructions.
 
